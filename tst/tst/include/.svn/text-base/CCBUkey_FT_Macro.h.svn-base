@@ -1,0 +1,55 @@
+//
+//  CCBUkey_FT_Macro.h
+//  FTCCBBank
+//
+//  Created by Jermy on 2018/3/13.
+//  Copyright © 2018年 FEITIAN. All rights reserved.
+//
+
+#ifndef CCBUkey_FT_Macro_h
+#define CCBUkey_FT_Macro_h
+
+#define    CCB_OK                           0x00000000    //    成功
+#define    CCB_DEVICE_FAILURE               0x00001001    //    设备连接失败
+#define    CCB_COMM_ERROR                   0x00001002    //    通讯错误
+#define    CCB_ENERGY_LOW                   0x00001003    //    设备电量不足，不能进行通讯
+#define    CCB_DEVICE_BUSY                  0x00001004    //    设备忙
+#define    CCB_NOT_CORRECT_DEVICE           0x00002001    //    插入错误的网银盾
+#define    CCB_OPERATOR_OUTTIME             0x00002002    //    操作超时
+#define    CCB_USER_CANCEL                  0x00002003    //    用户取消操作
+#define    CCB_OPERATION_INTERRUPT          0x00002004    //    用户操作被打断（如电话等）
+#define    CCB_DEFAULT_PASSWORD             0x00003001    //    签名不能为默认口令
+#define    CCB_PIN_LOCK                     0x00003002    //    设备锁死，口令重试次数为0
+#define    CCB_INVALID_PASSWORD             0x000030C0    //    口令校验失败，&0F=剩余重试次数
+#define    CCB_NO_CERT                      0x00004001    //    设备中没有证书或密钥对
+#define    CCB_CERT_DAMAGE                  0x00004002    //    设备中证书损坏
+#define    CCB_CERT_EXPIRED                 0x00004003    //    证书过期，不能进行交易
+#define    CCB_INVALID_PARAMETER            0x00005001    //    签名数据错，参数无效
+#define    CCB_INVALID_ALGORITHM            0x00005002    //    算法错误
+#define    CCB_MIC_UNUSED                   0x00006001    //    ios7下系统提示用户是否允许使用mic，用户点击不允许则不能操作，需要用户重新设置
+#define    CCB_AUDIO_SETTING                0x00006002    //    Android系统中，返回该错误码表示系统中的杜比音效或者音效增强处于打开状态，需要用户手动关闭
+#define    CCB_UNKOWN_ERROR                 0x0000FFF0    //    未知错误
+
+#define    FT_BLE_NOT_POWERON               0x00007001    //    蓝牙未开启
+#define    FT_NOT_FIND_BLE_DEVICE           0x00007002    //    未找到蓝牙设备
+#define    FT_BLE_CONN_PAIRFAIL             0x00007003    //    蓝牙配对失败
+
+
+//秘钥对类型
+#define    FT_KEY_TYPE_RSA                  0   //RSA
+#define    FT_KEY_TYPE_SM2                  2   //SM2
+
+//证书类型
+#define    FT_CERT_TYPE_RSA                  0   //RSA证书
+#define    FT_CERT_TYPE_SM2_SIGN             1   //交易签名国密证书
+#define    FT_CERT_TYPE_SM2_COMMON           2   //普通签名国密证书
+
+//HASH类型：
+#define    FT_CM_HASH_NO                     0x0100
+#define    FT_CM_HASH_SHA_1                  0x0101
+#define    FT_CM_HASH_MD5                    0x0102
+#define    FT_CM_HASH_SM3                    0x0103
+#define    FT_CM_HASH_SHA256                 0x0105
+
+#endif /* CCBUkey_FT_Macro_h */
+

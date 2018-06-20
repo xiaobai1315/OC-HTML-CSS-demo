@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/es/audiodock/!svn/ver/17397/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include
+END
+FTABCBank.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/es/audiodock/!svn/ver/17273/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/FTABCBank.h
+END
+SecCodeImp.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/es/audiodock/!svn/ver/17273/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/SecCodeImp.h
+END
+FTPublicMethods.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/es/audiodock/!svn/ver/17273/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/FTPublicMethods.h
+END
+CCBUkey_FT.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/es/audiodock/!svn/ver/17347/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/CCBUkey_FT.h
+END
+CCBUkey_FT_Macro.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/es/audiodock/!svn/ver/17397/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/CCBUkey_FT_Macro.h
+END
+libreadid.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/es/audiodock/!svn/ver/17273/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/libreadid.h
+END
+ABCBankProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/es/audiodock/!svn/ver/17273/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/ABCBankProtocol.h
+END
+CCBUKeyProtocol.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/es/audiodock/!svn/ver/17391/sourcecode/CCB/ios/BLEKey/trunk/demo/DemoCCB/DemoCCB/include/CCBUKeyProtocol.h
+END

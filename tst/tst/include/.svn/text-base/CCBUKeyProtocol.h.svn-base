@@ -1,0 +1,134 @@
+
+#import <Foundation/Foundation.h>
+
+@protocol CCBUKeyProtocol <NSObject>
+
+@required
+
+/**
+ *  获取中间件版本号，规则:x.x.x.x
+ *
+ *  @param ver 返回版本号
+ *
+ *  @return 错误码
+ */
++(NSInteger)getVersion:(NSString**)ver;
+
+/**
+ *  管理工具，需要判断序列号，如果不匹配提示
+ *
+ *  @param sn 序列号
+ *  @param errCode 错误码
+ *
+ *  @return 管理工具，UIViewController
+ */
++(id)keyTool:(NSString*)sn errCode:(NSInteger*)errCode;
+
+/**
+ *  同步签名接口
+ *
+ *  @param signOri   签名原文
+ *  @param UkeyID    蓝牙盾序列号
+ *  @param random    蓝牙盾序列号加密因子
+ *  @param iKeyType  密钥对类型
+ *  @param iCertType 证书类型
+ *  @param iHashType HASH类型
+ *
+ *  @return signResult 签名结果
+ *  @return encSn 加密后的序列号
+ */
++(NSInteger) CCBSign:(NSString *)signOri
+           andUkeyID:(NSString *)UkeyID
+           andRandom:(NSString *)random
+              withID:(NSInteger)iKeyType
+        withCertType:(NSInteger)iCertType
+        withHashType:(NSInteger)iHashType
+       receiveResult:(NSString **)signResult
+               encSn:(NSString **)encSn;
+
+/**
+ *  异步签名接口
+ *
+ *  @param signOri   签名原文
+ *  @param UkeyID    蓝牙盾序列号
+ *  @param random    蓝牙盾序列号加密因子
+ *  @param iKeyType  密钥对类型
+ *  @param iCertType 证书类型
+ *  @param iHashType HASH类型
+ *  @param sender    调用者
+ *  @param action    回调函数
+ */
++(void) CCBSign:(NSString *)signOri
+      andUkeyID:(NSString *)UkeyID
+      andRandom:(NSString *)random
+         withID:(NSInteger)iKeyType
+   withCertType:(NSInteger)iCertType
+   withHashType:(NSInteger)iHashType
+         sender:(id)sender
+         action:(SEL)action;
+
+/**
+ *  签名准备接口
+ *
+ *  @param UkeyID   蓝牙盾序列号
+ *  @param userPin  蓝牙盾用户PIN码
+ *
+ *  @return 错误码
+ */
++(NSInteger)CCBTestSignPrepare:(NSString *)UkeyID andPin:(NSString *)userPin;
+
+/**
+ *  签名测试接口
+ *
+ *  @param signOri   签名原文
+ *  @param UkeyID    蓝牙盾序列号
+ *  @param userPin   蓝牙盾用户PIN码
+ *  @param iKeyType  密钥对类型
+ *  @param iCertType 证书类型
+ *  @param iHashType HASH类型
+ *
+ *  @return signResult 签名结果
+ */
++(NSInteger) CCBTestSign:(NSString *)signOri
+               andUkeyID:(NSString *)UkeyID
+                 withPin:(NSString *)userPin
+                  withID:(NSInteger)iKeyType
+            withCertType:(NSInteger)iCertType
+            withHashType:(NSInteger)iHashType
+           receiveResult:(NSString **)signResult;
+
+/**
+ *  完成签名测试接口
+ *
+ *  @return signResult 签名结果
+ */
++(NSInteger) CCBTestSignFinish;
+
+/**
+ *  根据指定序列号，连接蓝牙盾，开启读卡功能
+ *
+ *  @param sn 序列号
+ *
+ *  @return 错误码
+ */
++(NSInteger) connectIDCardReader:(NSString *)sn;
+
+/**
+ *  读取身份证信息
+ *
+ *  @param cardInfo 身份证信息
+ *
+ *  @return 错误码
+ */
++(NSInteger) readIDCardInfo:(NSString **)cardInfo;
+
+/**
+ *  断开蓝牙盾
+ *
+ *  @return 错误码
+ */
++(NSInteger) disconnectIDCardReader;
+
+@end
+
+
